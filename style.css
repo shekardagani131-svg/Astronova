@@ -1,0 +1,1033 @@
+/* =====================================
+   ASTRONOVA
+   MAIN STYLESHEET
+===================================== */
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #17245c,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 70%,
+            #35145c,
+            transparent 30%
+        ),
+
+        #030313;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background:
+        rgba(3, 3, 19, 0.92);
+
+    backdrop-filter:
+        blur(12px);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.navbar {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding:
+        18px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    color: white;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 25px;
+
+}
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: #6ddcff;
+
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding:
+        130px 20px 80px;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #202c72 0%,
+            #080823 40%,
+            #02020c 80%
+        );
+
+}
+
+
+.hero-content {
+
+    max-width: 850px;
+
+    animation:
+        fadeIn 1.5s ease;
+
+}
+
+
+.small-title {
+
+    color: #66d9ff;
+
+    letter-spacing: 5px;
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(55px, 10vw, 110px);
+
+    letter-spacing: 10px;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+
+        0 0 15px #66d9ff,
+
+        0 0 40px #5266ff;
+
+}
+
+
+.hero h2 {
+
+    font-size:
+        clamp(25px, 4vw, 45px);
+
+    color: #d9eaff;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero p {
+
+    max-width: 680px;
+
+    margin:
+        0 auto 35px;
+
+    color: #c9c9dc;
+
+    font-size: 18px;
+
+}
+
+
+/* =====================================
+   HERO BUTTON
+===================================== */
+
+.hero-btn {
+
+    display: inline-block;
+
+    padding:
+        14px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4f7cff,
+            #a855f7
+        );
+
+    transition: 0.3s;
+
+}
+
+
+.hero-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 35px
+        rgba(80,100,255,0.4);
+
+}
+
+
+/* =====================================
+   SECTIONS
+===================================== */
+
+.section {
+
+    padding:
+        100px 6%;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            rgba(35,50,120,0.25),
+            transparent 50%
+        );
+
+}
+
+
+.dark-section {
+
+    background:
+        linear-gradient(
+            180deg,
+            #030313,
+            #080822,
+            #030313
+        );
+
+}
+
+
+.section-title {
+
+    font-size: 42px;
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 0 20px
+        rgba(100,150,255,0.4);
+
+}
+
+
+.section-description {
+
+    max-width: 700px;
+
+    margin:
+        0 auto 50px;
+
+    color: #aaaac2;
+
+    font-size: 17px;
+
+}
+
+
+/* =====================================
+   PLANET CONTAINER
+===================================== */
+
+.planet-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(230px,1fr)
+        );
+
+    gap: 28px;
+
+}
+
+
+/* =====================================
+   PLANET CARD
+===================================== */
+
+.planet-card {
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    backdrop-filter:
+        blur(10px);
+
+    transition:
+        0.4s;
+
+}
+
+
+.planet-card:hover {
+
+    transform:
+        translateY(-12px);
+
+    border-color:
+        #617dff;
+
+    box-shadow:
+        0 20px 45px
+        rgba(70,90,255,0.25);
+
+}
+
+
+/* =====================================
+   PLANET IMAGE
+===================================== */
+
+.planet-image {
+
+    width: 170px;
+
+    height: 170px;
+
+    margin:
+        0 auto 20px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    background: #050510;
+
+    box-shadow:
+
+        0 0 25px
+        rgba(100,140,255,0.35);
+
+    transition:
+        0.5s;
+
+}
+
+
+.planet-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        0.5s;
+
+}
+
+
+.planet-card:hover
+.planet-image img {
+
+    transform:
+        scale(1.12);
+
+}
+
+
+.planet-card:hover
+.planet-image {
+
+    box-shadow:
+
+        0 0 45px
+        rgba(100,150,255,0.75);
+
+}
+
+
+/* =====================================
+   PLANET TEXT
+===================================== */
+
+.planet-card h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.planet-card p {
+
+    color: #b8b8cc;
+
+    min-height: 75px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =====================================
+   GENERAL BUTTON
+===================================== */
+
+button {
+
+    border: none;
+
+    cursor: pointer;
+
+    padding:
+        12px 25px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #4f7cff,
+            #a855f7
+        );
+
+    font-size: 14px;
+
+    transition:
+        0.3s;
+
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+
+        0 10px 30px
+        rgba(90,120,255,0.4);
+
+}
+
+
+/* =====================================
+   MISSIONS
+===================================== */
+
+.mission-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px,1fr)
+        );
+
+    gap: 30px;
+
+}
+
+
+.mission-card {
+
+    padding: 35px 25px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    transition:
+        0.4s;
+
+}
+
+
+.mission-card:hover {
+
+    transform:
+        translateY(-10px);
+
+    background:
+        rgba(255,255,255,0.1);
+
+}
+
+
+.mission-icon {
+
+    font-size: 55px;
+
+    display: block;
+
+    margin-bottom: 15px;
+
+}
+
+
+.mission-card h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.mission-card p {
+
+    color: #bdbdd0;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =====================================
+   GALAXIES
+===================================== */
+
+.galaxy-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(280px,1fr)
+        );
+
+    gap: 30px;
+
+}
+
+
+.galaxy-card {
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            rgba(87,74,170,0.3),
+            rgba(30,30,70,0.5)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    transition:
+        0.4s;
+
+}
+
+
+.galaxy-card:hover {
+
+    transform:
+        scale(1.04);
+
+}
+
+
+.galaxy-image {
+
+    font-size: 70px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.galaxy-card h3 {
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.galaxy-card p {
+
+    color: #bdbdd0;
+
+}
+
+
+/* =====================================
+   GALLERY
+===================================== */
+
+.gallery-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
+    gap: 20px;
+
+}
+
+
+.gallery-item {
+
+    min-height: 220px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #2c3a86,
+            #0c0c2d
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    transition:
+        0.4s;
+
+}
+
+
+.gallery-item:hover {
+
+    transform:
+        scale(1.04);
+
+    box-shadow:
+        0 20px 40px
+        rgba(60,80,255,0.3);
+
+}
+
+
+.gallery-item span {
+
+    font-size: 70px;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* =====================================
+   CONTACT
+===================================== */
+
+.contact-section {
+
+    background:
+
+        linear-gradient(
+            180deg,
+            #050517,
+            #0b0b28
+        );
+
+}
+
+
+.contact-form {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    color: white;
+
+    font-size: 16px;
+
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+    border-color:
+        #6380ff;
+
+    box-shadow:
+        0 0 12px
+        rgba(80,110,255,0.2);
+
+}
+
+
+.contact-form textarea {
+
+    resize: vertical;
+
+}
+
+
+.contact-form button {
+
+    align-self: center;
+
+}
+
+
+#formMessage {
+
+    margin-top: 20px;
+
+    color: #72e6a1;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        40px 20px;
+
+    background: #02020c;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.1);
+
+    color: #aaaabd;
+
+}
+
+
+footer h3 {
+
+    color: white;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+
+}
+
+
+/* =====================================
+   ANIMATION
+===================================== */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+    .navbar {
+
+        flex-direction: column;
+
+        gap: 15px;
+
+    }
+
+
+    .nav-links {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+
+    }
+
+
+    .hero {
+
+        padding-top: 170px;
+
+    }
+
+
+    .section {
+
+        padding:
+            75px 20px;
+
+    }
+
+
+    .section-title {
+
+        font-size: 34px;
+
+    }
+
+
+    .hero h1 {
+
+        letter-spacing: 5px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .nav-links {
+
+        gap: 8px;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 13px;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 50px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .planet-container,
+    .mission-container,
+    .galaxy-container,
+    .gallery-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .planet-image {
+
+        width: 150px;
+
+        height: 150px;
+
+    }
+
+}
